@@ -1,0 +1,9 @@
+name: quarkustemplate
+description: Template de aplicação Rest API utilizando quarkus framework
+types:
+  - app-template
+inputs:
+  - label: Project name
+    type: text
+    name: project_name
+    default: project-name
