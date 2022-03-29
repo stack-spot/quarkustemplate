@@ -7,3 +7,28 @@ inputs:
     type: text
     name: project_name
     default: project-name
+  - label: "Informe o groupId:"
+    type: text
+    name: group_id
+    default: "br.com.stackspot"
+  - label: "Informe a versão"
+    type: text
+    name: version
+    default: "1.0.0_SNAPSHOT"
+  - label: "Informe o gerenciador de pacotes"
+    type: text
+    name: package_manager
+    items:
+      - Gradle
+      - Maven
+    default: Gradle
+##Hooks
+hooks:
+  - type: run
+    trigger: after-render
+    windows:
+      - cmd /c scripts\\after_render.cmd
+  - type: run
+    trigger: after-render
+    windows:
+      - cmd /c rmdir /s /q "scripts"
