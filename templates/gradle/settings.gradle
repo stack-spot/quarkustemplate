@@ -8,4 +8,4 @@ pluginManagement {
         id "${quarkusPluginId}" version "${quarkusPluginVersion}"
     }
 }
-rootProject.name={{inputs.project_name}}
+rootProject.name="{inputs.project_name}}"
