@@ -1,10 +1,3 @@
-/home/wesleybonissoni/Downloads/code-with-quarkus-maven/code-with-quarkus-maven/.mvn
-/home/wesleybonissoni/Downloads/code-with-quarkus-maven/code-with-quarkus-maven/mvnw
-/home/wesleybonissoni/Downloads/code-with-quarkus-maven/code-with-quarkus-maven/mvnw.cmd
-/home/wesleybonissoni/Downloads/code-with-quarkus-maven/code-with-quarkus-maven/pom.xml
-/home/wesleybonissoni/Downloads/code-with-quarkus-maven/code-with-quarkus-maven/README.md
-/home/wesleybonissoni/Downloads/code-with-quarkus-maven/code-with-quarkus-maven/.dockerignore
-/home/wesleybonissoni/Downloads/code-with-quarkus-maven/code-with-quarkus-maven/.gitignore####
 # This Dockerfile is used in order to build a container that runs the Quarkus application in JVM mode
 #
 # Before building the container image run:
@@ -13,18 +6,18 @@
 #
 # Then, build the image with:
 #
-# docker build -f src/main/docker/Dockerfile.jvm -t quarkus/code-with-quarkus-maven-jvm .
+# docker build -f src/main/docker/Dockerfile.jvm -t quarkus/{{inputs.project_name}} .
 #
 # Then run the container using:
 #
-# docker run -i --rm -p 8080:8080 quarkus/code-with-quarkus-maven-jvm
+# docker run -i --rm -p 8080:8080 quarkus/{{inputs.project_name}}
 #
 # If you want to include the debug port into your docker image
 # you will have to expose the debug port (default 5005) like this :  EXPOSE 8080 5005
 #
 # Then run the container using :
 #
-# docker run -i --rm -p 8080:8080 quarkus/code-with-quarkus-maven-jvm
+# docker run -i --rm -p 8080:8080 quarkus/{{inputs.project_name}}
 #
 # This image uses the `run-java.sh` script to run the application.
 # This scripts computes the command line to execute your Java application, and
